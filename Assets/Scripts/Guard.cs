@@ -7,9 +7,11 @@ public class Guard : MonoBehaviour {
 
     public Transform pathHolder;
 	public LayerMask viewMask;
-    float speed = 5f;
-    float waitTime = .3f;
-    float rotationSpeed = 90f; //90deg per second
+   
+	public float speed = 5f;
+	public float waitTime = .3f;
+	public float rotationSpeed = 90f; //90deg per second
+	public float timeToSpotPlayer = 0.5f;
 
 	public Light spotLight;
 	public float viewDistance = 8f;
