@@ -15,9 +15,6 @@ public class Player : MonoBehaviour {
 	private float angle;
 	private Vector3 velocity = Vector3.zero;
 
-	public Light spotLight;
-	public float viewDistance = 8f;
-
 	void Start(){
 		rb = GetComponent<Rigidbody> ();
 	}

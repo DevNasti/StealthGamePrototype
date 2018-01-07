@@ -152,7 +152,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.8455882, g: 0.83358186, b: 0.41035897, a: 1}
   m_Intensity: 8
-  m_Range: 13
+  m_Range: 10
   m_SpotAngle: 80
   m_CookieSize: 10
   m_Shadows:
@@ -161,7 +161,7 @@ Light:
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0
-    m_NormalBias: 0.4
+    m_NormalBias: 0.3
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
@@ -289,6 +289,36 @@ Transform:
   m_Father: {fileID: 1603538055}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &225954358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 225954359}
+  m_Layer: 0
+  m_Name: Obstacles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225954359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 225954358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.87, y: 1.75, z: 2}
+  m_LocalScale: {x: 3.5, y: 3.5000002, z: 11.200001}
+  m_Children:
+  - {fileID: 1935131591}
+  - {fileID: 694767408}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477889561
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathHolder: {fileID: 1603538055}
+  viewMask:
+    serializedVersion: 2
+    m_Bits: 256
+  spotLight: {fileID: 49614769}
+  viewDistance: 10
 --- !u!23 &477889563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -381,7 +416,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477889561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.2}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_Children:
   - {fileID: 49614768}
@@ -456,7 +491,7 @@ GameObject:
   - component: {fileID: 694767407}
   - component: {fileID: 694767406}
   - component: {fileID: 694767405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,11 +558,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694767404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 1.75, z: 1}
-  m_LocalScale: {x: 1.75, y: 3.5000002, z: 8.960001}
+  m_LocalPosition: {x: 2.1028569, y: 0, z: -0.08928571}
+  m_LocalScale: {x: 0.49999997, y: 1, z: 0.8}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 225954359}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890039774
 GameObject:
@@ -659,7 +694,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177833479}
   m_LocalRotation: {x: 0.38268274, y: -0, z: -0, w: 0.9238798}
-  m_LocalPosition: {x: 0, y: 6.13, z: -5.63}
+  m_LocalPosition: {x: 0, y: 12.12, z: -11.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -918,7 +953,7 @@ GameObject:
   - component: {fileID: 1935131590}
   - component: {fileID: 1935131589}
   - component: {fileID: 1935131588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,11 +1020,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935131587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.87, y: 1.75, z: 2}
-  m_LocalScale: {x: 3.5, y: 3.5000002, z: 11.200001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 225954359}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063602585
 GameObject:
@@ -1004,7 +1039,7 @@ GameObject:
   - component: {fileID: 2063602586}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,8 +1085,6 @@ MonoBehaviour:
   moveSpeed: 5
   smoothTime: 0.1
   turnSpeed: 8
-  spotLight: {fileID: 0}
-  viewDistance: 8
 --- !u!4 &2063602589
 Transform:
   m_ObjectHideFlags: 0
