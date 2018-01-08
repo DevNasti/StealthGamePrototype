@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour {
 
+	public static event System.Action OnGuardHasSpottedPlayer;
     public Transform pathHolder;
 	public LayerMask viewMask;
    
@@ -15,8 +16,12 @@ public class Guard : MonoBehaviour {
 
 	public Light spotLight;
 	public float viewDistance = 8f;
+
+	float playerVisibleTimer;
 	float viewAngle;
+
 	Color originalSpotLightColor;
+	Color alarmColor = Color.red;
 
 	Transform player;
 
@@ -37,11 +42,21 @@ public class Guard : MonoBehaviour {
 
 	void Update(){
 		if (CanSeePlayer ()) {
-			spotLight.color = Color.red;
-		}
+			playerVisibleTimer += Time.deltaTime;
+			}
 		else {
-			spotLight.color = originalSpotLightColor;
+			playerVisibleTimer = 0;
+			}
+
+		playerVisibleTimer = Mathf.Clamp (playerVisibleTimer, 0, timeToSpotPlayer);
+		spotLight.color = Color.Lerp(originalSpotLightColor, alarmColor, playerVisibleTimer/timeToSpotPlayer);
+
+		if (playerVisibleTimer >= timeToSpotPlayer) //if here the gard has spotted the player for "enough time"
+		{
+			if (OnGuardHasSpottedPlayer != null)
+				OnGuardHasSpottedPlayer ();
 		}
+			
 	}
 
     IEnumerator FollowPath(Vector3[] wayPoints)
