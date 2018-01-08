@@ -2,6 +2,7 @@
 
 public class Player : MonoBehaviour {
 
+	public event System.Action OnReachedEndOfLevel;
 	public VirtualJoystick js;
 
     public float moveSpeed = 5f;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour {
 		if (!disabledPlayer) {
 			if(js!=null)
 				inputDirection = new Vector3 (js.Horizontal(), 0, js.Vertical()).normalized;
+			
 			else 
 				inputDirection = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical")).normalized;
 
@@ -66,4 +68,14 @@ public class Player : MonoBehaviour {
 	void OnDestroy(){
 		Guard.OnGuardHasSpottedPlayer -= Disable;
 	}
+
+	void OnTriggerEnter(Collider hitCollider){
+		if (hitCollider.tag == "Finish") {
+			Disable();
+			if (OnReachedEndOfLevel != null)
+				OnReachedEndOfLevel ();
+		}
+
+	}
+
 }
