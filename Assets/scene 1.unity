@@ -932,7 +932,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 359949489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960.00006, y: -811.7847, z: 0}
+  m_LocalPosition: {x: 960.00006, y: -895.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470803115}
@@ -1764,8 +1764,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625152496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 353, y: 298.5, z: 0}
-  m_LocalScale: {x: 0.36770833, y: 0.36770833, z: 0.36770833}
+  m_LocalPosition: {x: 320, y: 298.5, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 359949490}
   - {fileID: 586427140}
@@ -2274,9 +2274,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 0dc9c24726445f54cb857b71dab8d2cd, type: 2}
   eyes: {fileID: 1529952547}
+  remainInState: {fileID: 11400000, guid: cdf6d563f442cf5459a8738c78e7306a, type: 2}
   navMeshAgent: {fileID: 0}
   waypointList: []
   nextWaipoint: 0
+  player: {fileID: 0}
 --- !u!1 &859468571
 GameObject:
   m_ObjectHideFlags: 0
