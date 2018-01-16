@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2f028b1bdbb555f42ac1b1786323e9d0
-timeCreated: 1515509096
+guid: 94cd64eec9918294997469dd4964bb40
+timeCreated: 1516100399
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,8 +16,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: a95f0a9a11c0d1d47b073104aa09d34f, type: 2}
+      name: Material__myPaette_png
+    second: {fileID: 2100000, guid: 2d3c43afe8b99e44da9aef04a9a800ac, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -47,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

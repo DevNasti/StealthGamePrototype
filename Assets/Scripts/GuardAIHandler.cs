@@ -11,8 +11,6 @@ public class GuardAIHandler : MonoBehaviour {
 	void Start(){
 		state = GetComponent<StateController> ();
 
-		Vector3 aux;
-
 		if(state.waypointList == null)	//if empty i initialize the waypoint list
 			state.waypointList = new List<Vector3>();
 		
